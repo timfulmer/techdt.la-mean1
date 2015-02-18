@@ -24,6 +24,7 @@
   "dependencies": {
     "assetmanager": "^1.1.1",
     "async": "~0.9.0",
+    "bluebird": "^2.9.9",
     "body-parser": "^1.2.0",
     "compression": "^1.0.1",
     "connect-flash": "^0.1.1",
@@ -38,7 +39,6 @@
     "forever": "^0.11.1",
     "gridfs-stream": "^0.5.1",
     "grunt-cli": "^0.1.13",
-    "grunt-hook": "~0.3.0",
     "grunt-concurrent": "^1.0.0",
     "grunt-contrib-clean": "^0.6.0",
     "grunt-contrib-csslint": "^0.3.1",
@@ -47,6 +47,7 @@
     "grunt-contrib-uglify": "^0.5.1",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-env": "^0.4.1",
+    "grunt-hook": "~0.3.0",
     "grunt-nodemon": "^0.3.0",
     "load-grunt-tasks": "^0.6.0",
     "lodash": "^2.4.1",
