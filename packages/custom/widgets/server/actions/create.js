@@ -42,9 +42,11 @@ exports.create=function(options){
   });
   return bb.all(promises).then(
     function(optionsList){
-      options.widget.doodads= _.map(optionsList,function(options){
-        return options.doodad._id;
-      });
+      options.widget.doodads= _.map(optionsList,
+        function(options){
+          return options.doodad._id;
+        }
+      );
       return options;
     }
   ).then(

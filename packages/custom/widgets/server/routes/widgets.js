@@ -7,8 +7,8 @@ var widgets=require('../controllers/widgets');
 module.exports = function(Widgets, app, auth, database) {
 
   app.post('/api/v1/widgets',
-    widgets.createDoodads,
     widgets.createWidget,
+    widgets.createDoodads,
     widgets.associateWidgetDoodads);
 
   app.post('/api/v2/widgets',widgets.create);

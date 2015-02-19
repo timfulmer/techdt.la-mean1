@@ -9,6 +9,16 @@ var create=require('../actions/create'),
   Widget=mongoose.model('Widget'),
   Doodad=mongoose.model('Doodad');
 
+exports.createWidget=function(req,res,next){
+  new Widget(req.body.widget).save(function(err,widget){
+    if(err){
+      return next(err);
+    }
+    req.widget=widget;
+    next();
+  });
+};
+
 exports.createDoodads=function(req,res,next){
   req.doodads=[];
   _.forEach(req.body.doodads,function(doodad){
@@ -20,16 +30,6 @@ exports.createDoodads=function(req,res,next){
     });
   });
   return next();
-};
-
-exports.createWidget=function(req,res,next){
-  new Widget(req.body.widget).save(function(err,widget){
-    if(err){
-      return next(err);
-    }
-    req.widget=widget;
-    next();
-  });
 };
 
 exports.associateWidgetDoodads=function(req,res){
